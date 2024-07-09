@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.emo-container {
+  position: relative;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.emo-container .top-gradient,
+.emo-container .bottom-gradient {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  pointer-events: none;
+}
+
+.emo-container .top-gradient {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.emo-container .bottom-gradient {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.emo-config {
+  width: 100%;
+  height: 2300px;
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 1);
+}
+
+.mainemo {
+  width: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  padding-top: 25px;
+}
+
+.con-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.con-img img {
+  aspect-ratio: 1 / 1;
+  width: 170px;
+}

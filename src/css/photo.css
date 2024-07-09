@@ -1,0 +1,113 @@
+.pho-config {
+  position: relative;
+  width: 100%;
+  height: 1100px;
+  background-image: url("../../public/Image/Union.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.logotext {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.logotext span {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(60, 60, 60, 1);
+  font-family: "Poppins";
+}
+
+.mainpho {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.pho-btn {
+  width: 280px;
+  height: 220px;
+  border-radius: 20px 20px 0px 0px;
+  border: none;
+  z-index: 99;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btnFoot {
+  width: 280px;
+  height: 60px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(60, 60, 60, 1);
+}
+
+.vector {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  padding-bottom: 18px;
+}
+
+.titCon {
+  position: relative;
+  width: 100%;
+  height: 89px;
+  border-top: 2px solid rgba(0, 0, 0, 1);
+  border-right: 0px solid rgba(0, 0, 0, 1);
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+  border-left: 0px solid rgba(0, 0, 0, 1);
+  padding-top: 7px;
+}
+
+.titCon span {
+  font-size: 25px;
+  font-weight: 500;
+  color: rgba(114, 114, 114, 1);
+}
+
+.titdate {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.imgfirst {
+  width: 95%;
+  height: 450px;
+  display: flex;
+}
+
+.thumbImg {
+  width: 100%;
+  height: 485px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 28px;
+}

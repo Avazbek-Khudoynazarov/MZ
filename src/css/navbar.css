@@ -1,0 +1,49 @@
+#home-navbar {
+  width: 100%;
+  height: auto;
+}
+
+.config-navbar {
+  width: 100%;
+  height: 80px;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: top 0.3s;
+}
+
+.con-icon {
+  cursor: pointer;
+}
+
+.con-link {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.main-link {
+  text-decoration: none;
+  color: rgba(114, 114, 114, 1);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.main-link:active {
+  color: rgba(0, 214, 116, 1);
+}
+
+.headPage {
+  width: 100%;
+  height: 700px;
+  background-image: url("../../public/Image/main.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgba(116, 187, 81, 1);
+}
