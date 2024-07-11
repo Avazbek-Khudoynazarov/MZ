@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { HashLink as Link } from "react-router-hash-link";
-import { motion } from "framer-motion";
 import "swiper/swiper-bundle.css";
 import { useNavigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
@@ -23,29 +21,11 @@ const videos = [
   "https://www.youtube.com/embed/TK_xGcVkVUM",
 ];
 
-export default function Main() {
+export default function AllMain() {
   const [showLinks, setShowLinks] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
   const navigate = useNavigate();
-
-  const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) {
-      setShowLinks(false);
-    } else {
-      setShowLinks(true);
-    }
-    setLastScrollY(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", controlNavbar);
-
-    return () => {
-      window.removeEventListener("scroll", controlNavbar);
-    };
-  }, [lastScrollY]);
 
   const handleVideoClick = (url: string) => {
     const videoFrame = document.getElementById(
@@ -68,91 +48,59 @@ export default function Main() {
   const currentVideos = videos.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
-    <div id="head-config">
-      <div id="headCon2">
-        <img
-          style={{ position: "absolute", right: 0, top: "10%" }}
-          src="./Icons/coronaR.png"
-          alt=""
-        />
-        <img
-          style={{ position: "absolute" }}
-          src="./Icons/coronaL.png"
-          alt=""
-        />
-
-        <motion.div
-          className="config-navbar"
-          initial={{ opacity: 1, y: 0 }}
-          animate={{ opacity: showLinks ? 1 : 0, y: showLinks ? 0 : -50 }}
-          transition={{ duration: 0.3 }}
+    <div
+      style={{
+        width: "100%",
+        height: "1900px",
+        background: "rgba(255, 255, 255, 1)",
+      }}
+    >
+      <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+        <div
+          style={{
+            width: "1150px",
+            display: "flex",
+            flexDirection: "column",
+            alignContent: "center",
+            paddingTop: "90px",
+          }}
         >
-          <div className="con-icon">
-            <Link to="/" smooth>
-              <img src="../Icons/mz.png" alt="" />
-            </Link>
-          </div>
-          <div className="con-link">
-            <Link className="main-link" to="/" smooth>
-              소개
-            </Link>
-            <Link className="main-link" to="/other-page">
-              학생작품
-            </Link>
-            <Link className="main-link" to="#section1">
-              수상작품
-            </Link>
-          </div>
-        </motion.div>
-        <div style={{ paddingTop: "120px" }} className={"vidTitle"}>
-          <img src="./Icons/tesang.png" alt="" />
-          <span
-            style={{ fontSize: "30px", fontWeight: "500", marginBottom: "9px" }}
-          >
-            뉴테크 공모전 수상자들의 영상을 볼 수 있어요!
-          </span>
-        </div>
-        <div className={"HVideo"}>
-          <div
-            className={"HVideo2"}
+          <iframe
+            id="vid_frame"
+            src={"https://www.youtube.com/embed/QvDDqyvFh-U"}
             style={{
+              top: 0,
               left: 0,
-              width: "1150px",
-              height: "719px",
-              position: "relative",
+              width: "100%",
+              height: "657px",
+            }}
+            allowFullScreen
+            scrolling="no"
+            allow="encrypted-media; accelerometer; gyroscope; picture-in-picture"
+          ></iframe>
+
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              gap: "42%",
+              paddingTop: "30px",
             }}
           >
-            <iframe
-              id="vid_frame"
-              src={"https://www.youtube.com/embed/QvDDqyvFh-U"}
-              style={{
-                top: 0,
-                left: 0,
-                width: "95%",
-                height: "657px",
-              }}
-              allowFullScreen
-              scrolling="no"
-              allow="encrypted-media; accelerometer; gyroscope; picture-in-picture"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-      <div className="allVideos">
-        <div className={"con-vid"}>
-          <div className={"firstS"}>
             <div>
               <img src="./Icons/School.png" alt="" />
               <img src="./Icons/School2.png" alt="" />
             </div>
-            <div className={"Cinput"}>
+            <div className={"Cinput2"}>
               <input type="text" placeholder="검색" />
               <SearchIcon
                 style={{
                   position: "absolute",
                   right: "25px",
                   top: "20px",
-                  color: "rgba(255, 122, 0, 1)",
+                  color: "rgba(47, 150, 253, 1)",
                 }}
               />
             </div>
@@ -161,7 +109,7 @@ export default function Main() {
             style={{
               display: "flex",
               flexWrap: "wrap",
-              gap: "44px",
+              gap: "40px",
               justifyContent: "center",
             }}
           >
@@ -242,7 +190,7 @@ export default function Main() {
                     },
                     "&.Mui-selected": {
                       backgroundColor: "rgba(255, 255, 255, 1)", // Change background color for selected item
-                      color: "rgba(255, 122, 0, 1)", // Change text color for selected item
+                      color: "rgba(47, 150, 253, 1)", // Change text color for selected item
                       fontSize: "20px",
                       fontWeight: 600,
                       "&:hover": {
@@ -254,7 +202,7 @@ export default function Main() {
                     width: "45px",
                     height: "45px",
                     borderRadius: "50%",
-                    color: "rgba(255, 122, 0, 1)", // Change arrow color
+                    color: "rgba(47, 150, 253, 1)", // Change arrow color
                     border: "1px solid rgba(217, 217, 217, 1)",
                     boxShadow: "0 2px 6px rgba(0, 0, 0, 0.1)",
                     "&:hover": {

@@ -1,5 +1,10 @@
-.head-config {
+#head-config {
   position: relative;
+  width: 100%;
+  height: 2400px;
+  background: rgba(255, 255, 255, 1);
+}
+#headCon2 {
   width: 100%;
   height: 1100px;
   background: rgba(255, 213, 65, 1);
@@ -47,7 +52,40 @@
 .len2 img {
   width: 579px;
   height: 312px;
-  border-radius: 10px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 122, 0, 1);
+}
+
+.Cinput {
+  position: relative;
+  width: 295px;
+  height: 63px;
+  border-radius: 40px;
+}
+
+.Cinput2 {
+  position: relative;
+  width: 295px;
+  height: 63px;
+  border-radius: 40px;
+}
+
+.Cinput2 input {
+  width: 295px;
+  height: 63px;
+  border-radius: 40px;
+  border: 1px solid rgba(47, 150, 253, 1);
+  padding: 20px;
+  font-size: large;
+}
+
+.Cinput input {
+  width: 295px;
+  height: 63px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 122, 0, 1);
+  padding: 20px;
+  font-size: large;
 }
 
 .HVideo {
@@ -66,46 +104,73 @@
   background: rgba(255, 255, 255, 1);
 }
 
-.config-all {
+.allVideos {
   width: 100%;
-  height: 1250px;
-  background: rgba(255, 255, 255, 1);
+  height: 1200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.all-videos {
-  width: 75%;
+.con-vid {
+  width: 1150px;
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 20px;
 }
 
-.all-tit {
-  position: relative;
-  width: 281px;
-  height: 86px;
-  border-radius: 0px 0px 20px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-left: 28px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.desc2 {
-  position: absolute;
-  font-size: 15px;
-  font-weight: 600;
-  color: rgba(114, 114, 114, 1);
-}
-
-.video-row {
+.firstS {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  border: 2px solid rebeccapurple;
+  padding-top: 87px;
+}
+.Simg {
+  width: 290px;
+  height: 156px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.secondST {
+  position: relative;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.secondS {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainSecond {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.thumbVid2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid rgb(252, 232, 232);
+}
+
+.Cpag {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }

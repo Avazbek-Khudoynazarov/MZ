@@ -1,0 +1,14 @@
+.conHead2 {
+  width: 100%;
+  height: 900px;
+  background: rgba(156, 214, 245, 1);
+}
+
+.bottom {
+  width: 100%;
+  height: 450px;
+  background-image: url("../../public/Icons/cloud.png");
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
+import { useNavigate } from "react-router-dom";
 import $ from "jquery";
 
 const Competition: React.FC = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     new Swiper(".swiper-container-videos", {
       loop: false,
@@ -44,6 +47,10 @@ const Competition: React.FC = () => {
     if (videoFrame) {
       videoFrame.src = url;
     }
+  };
+
+  const handleMoreButtonClick = () => {
+    navigate("/other-page#headCon2");
   };
 
   return (
@@ -312,7 +319,7 @@ const Competition: React.FC = () => {
           </div>
         </section>
         <div className={"btnCom"}>
-          <button>더 많은 작품 보기</button>
+          <button onClick={handleMoreButtonClick}>더 많은 작품 보기</button>
         </div>
       </div>
     </div>

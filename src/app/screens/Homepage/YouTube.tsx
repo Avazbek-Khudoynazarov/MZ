@@ -48,8 +48,8 @@ const VideoGallery: React.FC = () => {
     }
   };
 
-  const handleMoreButtonClick = () => {
-    navigate("/other-page");
+  const handleMoreButtonClick2 = () => {
+    navigate("/all-videos");
   };
 
   return (
@@ -322,7 +322,7 @@ const VideoGallery: React.FC = () => {
         </div>
       </section>
       <div className={"btnVid"}>
-        <button onClick={handleMoreButtonClick}>더 많은 작품 보기</button>
+        <button onClick={handleMoreButtonClick2}>더 많은 작품 보기</button>
       </div>
       <div className={"wrapPic"}>
         <div className={"wrap1"}>
